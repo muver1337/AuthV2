@@ -36,6 +36,9 @@ const userSchema = new mongoose.Schema({
         required: true,
         // match: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{3,}$/
     },
+    emailConfirmationToken: {
+        type: String
+    },
     is_confirmed: {
         type: Boolean,
         default: false,

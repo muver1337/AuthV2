@@ -1,5 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const nodemailer = require('nodemailer')
+const crypto = require('crypto')
 const passport = require('passport')
 const bodyParser = require('body-parser')
 const authRoutes = require('./routes/auth')
@@ -19,7 +21,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 app.use(require('cors')())
 
-app.use('/api/auth', authRoutes)
+app.use('/api', authRoutes)
 
 
 
