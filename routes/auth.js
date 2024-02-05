@@ -12,4 +12,7 @@ router.post('/register', controller.register);
 // GET-маршрут для подтверждения электронной почты
 router.get('/verify-email/:token', controller.verifyEmail);
 
+// POST-маршрут для смены пароля с подтверждением по почте
+router.post('/change-password', controller.changePassword);
+
 module.exports = router;
